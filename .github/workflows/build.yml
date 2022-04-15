@@ -1,0 +1,48 @@
+name: Build AnnoyingMarkdown
+
+on:
+  push:
+    branches: [ master ]
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ${{ matrix.os }}
+
+    strategy:
+      matrix:
+        os: [ubuntu-latest, windows-latest]
+        include:
+          - os: ubuntu-latest
+            output: out/AnnoyingText
+            build: build.sh
+
+          - os: windows-latest
+            output: out/AnnoyingText.exe
+            build: build.ps1
+            
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v1
+
+      - if: matrix.os == 'ubuntu-latest'
+        name: Update linux packages
+        run: | 
+          sudo apt update 
+          sudo apt upgrade
+
+      - name: Permissions
+        run: |
+          chmod +x ${{ matrix.build }}
+
+      - name: Build
+        run: ./${{ matrix.build }}
+
+      - name: Test
+        run: ./${{ matrix.output }}
+
+      - name: Upload artifact
+        uses: actions/upload-artifact@v1
+        with:
+          name: AnnoyingMarkdown
+          path: ./${{ matrix.output }}
