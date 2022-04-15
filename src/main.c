@@ -3,6 +3,7 @@
 #include <string.h>
 
 #define MISSING_ARG 1
+#define SUCCESS 0
 
 int
 main(int argc, char **argv)
@@ -73,5 +74,5 @@ main(int argc, char **argv)
     free(completeArgs);
     free(outputSize);
 
-    return 0;
+    return SUCCESS;
 }
