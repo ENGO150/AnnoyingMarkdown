@@ -39,7 +39,7 @@ jobs:
         run: ./${{ matrix.build }}
 
       - name: Test
-        run: ./${{ matrix.output }}
+        run: ./${{ matrix.output }} Hello World
 
       - name: Upload artifact
         uses: actions/upload-artifact@v1
