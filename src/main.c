@@ -32,6 +32,8 @@ main(int argc, char **argv)
 
         if (i == textNumberBuffer) //SPACE FOR TEXT
         {
+            if (argv[1][indexNumberBuffer] == '_') argv[1][indexNumberBuffer] = ' ';
+
             output[i] = argv[1][indexNumberBuffer];
             indexNumberBuffer++;
             continue;
