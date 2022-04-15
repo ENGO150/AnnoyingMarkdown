@@ -14,11 +14,11 @@ jobs:
         os: [ubuntu-latest, windows-latest]
         include:
           - os: ubuntu-latest
-            output: out/AnnoyingText
+            output: out/AnnoyingMarkdown
             build: build.sh
 
           - os: windows-latest
-            output: out/AnnoyingText.exe
+            output: out/AnnoyingMarkdown.exe
             build: build.ps1
             
     steps:
@@ -30,7 +30,7 @@ jobs:
         run: | 
           sudo apt update 
           sudo apt upgrade
-          
+
       - name: Permissions
         run: |
           chmod +x ${{ matrix.build }}
