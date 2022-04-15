@@ -11,4 +11,4 @@ main:
 	cc $(files) -o $(output)
 
 windows:
-	cc $(files) -o $(outputWin)
+	gcc $(files) -o $(outputWin)
