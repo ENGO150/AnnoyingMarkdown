@@ -3,7 +3,10 @@
 int
 main(int argc, char **argv)
 {
-    printf("%s\n", argv[0]);
+    if (argc == 1)
+    {
+        printf("Sorry, you must enter text as arg... \"./AnnoyingMarkdown TEXT_HERE\"");
+    }
 
     return 0;
 }
