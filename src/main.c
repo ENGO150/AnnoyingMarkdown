@@ -13,8 +13,28 @@ main(int argc, char **argv)
         exit(MISSING_ARG);
     }
 
+    int completeArgsLength = 0;
+
+    //COUNT completeArgsLength
+    for (int i = 1; i < argc; i++)
+    {
+        if (i != 1) completeArgsLength++; //ONE FOR SPACE
+
+        completeArgsLength += strlen(argv[i]);
+    }
+
+    char *completeArgs = malloc(completeArgsLength);
+
+    //LOAD completeArgs
+    for (int i = 1; i < argc; i++)
+    {
+        if (i != 1) strcat(completeArgs, " "); //SPACE
+
+        strcat(completeArgs, argv[i]);
+    }
+
     //VARIABLES
-    int outputSize = strlen(argv[1]) * 5; //SIZE CALCULATION ≈ 5x
+    int outputSize = strlen(completeArgs) * 5; //SIZE CALCULATION ≈ 5x
     int textNumberBuffer = 2; //THIS IS FOR COUNTING POSITIONS OF '||'
     int indexNumberBuffer = 0; //THIS IS FOR GETTING TEXT FROM ARG
     char *output = malloc(outputSize);
@@ -32,9 +52,9 @@ main(int argc, char **argv)
 
         if (i == textNumberBuffer) //SPACE FOR TEXT
         {
-            if (argv[1][indexNumberBuffer] == '_') argv[1][indexNumberBuffer] = ' ';
+            if (completeArgs[indexNumberBuffer] == '_') completeArgs[indexNumberBuffer] = ' ';
 
-            output[i] = argv[1][indexNumberBuffer];
+            output[i] = completeArgs[indexNumberBuffer];
             indexNumberBuffer++;
             continue;
         }
