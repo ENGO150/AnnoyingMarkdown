@@ -54,7 +54,7 @@ main(int argc, char **argv)
 
         if (i == textNumberBuffer) //SPACE FOR TEXT
         {
-            if (completeArgs[indexNumberBuffer] == '_') completeArgs[indexNumberBuffer] = ' ';
+            //if (completeArgs[indexNumberBuffer] == '_') completeArgs[indexNumberBuffer] = ' ';
 
             output[i] = completeArgs[indexNumberBuffer];
             indexNumberBuffer++;
