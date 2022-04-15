@@ -5,5 +5,8 @@ This project takes args and separates each character by '||'...
 
 Some text => ||S||||o||||m||||e|||| ||||t||||e||||x||||t||
 
+You can build this project by yourself or you can download .zip file with compiled files here: 
+https://github.com/ENGO150/AnnoyingMarkdown/actions (select the most recent run)
+
 Project is especially for creating annoying messages on discord, but can be used as regular markdown text.
 Thanks for support.
