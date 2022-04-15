@@ -1,3 +1,3 @@
 Remove-Item out/* -Recurse
 
-make
+make windows
