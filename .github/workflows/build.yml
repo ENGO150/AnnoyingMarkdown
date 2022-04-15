@@ -30,11 +30,7 @@ jobs:
         run: | 
           sudo apt update 
           sudo apt upgrade
-
-      - if: matrix.os == 'windows-latest'
-        name: Add MinGW into PATH
-        run: set path=%path:mingw64\bin=;%
-
+          
       - name: Permissions
         run: |
           chmod +x ${{ matrix.build }}
