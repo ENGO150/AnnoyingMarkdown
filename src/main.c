@@ -10,7 +10,7 @@ main(int argc, char **argv)
     if (argc == 1)
     {
         printf("Sorry, you must enter text as arg... \"./AnnoyingMarkdown TEXT_HERE\"");
-        exit(MISSING_ARG);
+        return MISSING_ARG;
     }
 
     int completeArgsLength = 0;
@@ -68,5 +68,9 @@ main(int argc, char **argv)
 
     printf("%s\n", output); //PRINT OUT OUTPUT
     
+    //DEALLOCATION
+    free(completeArgs);
+    free(outputSize);
+
     return 0;
 }
