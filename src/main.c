@@ -7,9 +7,10 @@
 int
 main(int argc, char **argv)
 {
+    //MISSING ARGS
     if (argc == 1)
     {
-        printf("Sorry, you must enter text as arg... \"./AnnoyingMarkdown TEXT_HERE\"");
+        printf("Sorry, you must enter text as args... \"./AnnoyingMarkdown TEXT HERE\"");
         return MISSING_ARG;
     }
 
