@@ -20,6 +20,10 @@ jobs:
           - os: windows-latest
             output: out/AnnoyingMarkdown.exe
             build: build.ps1
+
+          - os: macos-latest
+            output: out/AnnoyingMarkdown_MacOS
+            build: build.sh
             
     steps:
       - name: Checkout repository

@@ -2,4 +2,8 @@
 
 rm -rf out/*
 
-make
+if [[ "$(uname)" == "Darwin" ]]; then
+    make mac
+else
+    make
+fi

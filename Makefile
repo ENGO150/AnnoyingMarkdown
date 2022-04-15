@@ -3,6 +3,7 @@ all: main
 # Output file
 output = out/AnnoyingMarkdown
 outputWin = out/AnnoyingMarkdown.exe
+outputMac = out/AnnoyingMarkdown_MacOS
 
 # Main file
 files = src/main.c
@@ -12,3 +13,6 @@ main:
 
 windows:
 	gcc $(files) -o $(outputWin)
+
+mac:
+	gcc $(files) -o $(outputMac)
