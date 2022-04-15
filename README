@@ -1,0 +1,9 @@
+AnnoyingMarkdown
+================
+
+This project takes args and separates each character by '||'...
+
+Some text => ||S||||o||||m||||e|||| ||||t||||e||||x||||t||
+
+Project is especially for creating annoying messages on discord, but can be used as regular markdown text.
+Thanks for support.
