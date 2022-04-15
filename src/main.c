@@ -11,7 +11,7 @@ main(int argc, char **argv)
     //MISSING ARGS
     if (argc == 1)
     {
-        printf("Sorry, you must enter text as args... \"./AnnoyingMarkdown TEXT HERE\"");
+        printf("Sorry, you must enter text as args... \"./AnnoyingMarkdown TEXT HERE\"\n");
         return MISSING_ARG;
     }
 
