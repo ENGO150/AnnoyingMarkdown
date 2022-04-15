@@ -72,7 +72,7 @@ main(int argc, char **argv)
     
     //DEALLOCATION
     free(completeArgs);
-    free(outputSize);
+    free(output);
 
     return SUCCESS;
 }
