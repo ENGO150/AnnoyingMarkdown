@@ -8,5 +8,7 @@ Some text => ||S||||o||||m||||e|||| ||||t||||e||||x||||t||
 You can build this project by yourself or you can download .zip file with compiled files here: 
 https://github.com/ENGO150/AnnoyingMarkdown/actions (select the most recent run)
 
+Enter text you want to use as args: ./AnnoyingMarkdown Some text
+
 Project is especially for creating annoying messages on discord, but can be used as regular markdown text.
 Thanks for support.
