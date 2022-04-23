@@ -15,8 +15,7 @@ If you want to use (latest) stable version:
 --------------------
 
 If you want to use latest version:
-- Build this project by yourself or download .zip file with compiled files here: 
-  https://github.com/ENGO150/AnnoyingMarkdown/actions (Select the most recent run > Artifacts)
+- Build this project by yourself by running 'build' script (and optionally install by 'install.sh')
 
 
 Enter text you want to use as args: ./AnnoyingMarkdown Some text
