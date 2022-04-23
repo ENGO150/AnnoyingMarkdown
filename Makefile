@@ -1,7 +1,7 @@
 all: main
 
 # Output file
-output = out/AnnoyingMarkdown
+output = out/annoyingmarkdown
 outputWin = out/AnnoyingMarkdown.exe
 outputMac = out/AnnoyingMarkdown_MacOS
 
