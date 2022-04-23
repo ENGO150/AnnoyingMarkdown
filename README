@@ -5,12 +5,19 @@ This project takes args and separates each character by '||'...
 
 Some text => ||S||||o||||m||||e|||| ||||t||||e||||x||||t||
 
+  
+If you want to use (latest) stable version:
+- Download AUR package 'annoyingmarkdown-git' (CURRENTLY NOT WORKING)
+
+- Download .zip file with compiled files here:
+  https://github.com/ENGO150/AnnoyingMarkdown/releases/latest
+  
+--------------------
+
 If you want to use latest version:
 - Build this project by yourself or download .zip file with compiled files here: 
   https://github.com/ENGO150/AnnoyingMarkdown/actions (Select the most recent run > Artifacts)
-If you want to use (latest) stable version:
-- Download .zip file with compiled files here:
-  https://github.com/ENGO150/AnnoyingMarkdown/releases/latest
+
 
 Enter text you want to use as args: ./AnnoyingMarkdown Some text
 
