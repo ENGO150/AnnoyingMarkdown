@@ -1,3 +1,6 @@
 Remove-Item out/* -Recurse
 
-make windows
+echo "Using 'gcc' as default compiler."
+echo "Compiling..."
+
+gcc src/main.c -o out/annoyingmarkdown_windows.exe
