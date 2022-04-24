@@ -14,15 +14,15 @@ jobs:
         os:  [ ubuntu-latest, windows-latest, macos-latest ]
         include:
           - os: ubuntu-latest
-            output: out/annoyingmarkdown
+            output: out/annoyingmarkdown_linux
             build: build.sh
 
           - os: windows-latest
-            output: out/AnnoyingMarkdown.exe
-            build: build.ps1
+            output: out/annoyingmarkdown_windows.exe
+            build: build.sh
 
           - os: macos-latest
-            output: out/AnnoyingMarkdown_MacOS
+            output: out/annoyingmarkdown_macos
             build: build.sh
             
     steps:
