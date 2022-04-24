@@ -26,7 +26,7 @@ fi
 echo "Getting default compiler..."
 ###
 
-# Get OS
+# Get compiler
 if [[ "$os" == "linux" ]]; then
     compiler="cc"
 fi
