@@ -13,7 +13,7 @@ files="
 compiler="gcc"
 
 os="$(uname)"
-os="${os@L}" # Lower case
+os="${os,,}" # Lower case
 
 output="out/annoyingmarkdown_$os"
 
