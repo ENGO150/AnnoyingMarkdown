@@ -2,7 +2,7 @@ name: Build AnnoyingMarkdown
 
 on:
   push:
-    branches: [ stable, development ]
+    branches: [ development ]
   workflow_dispatch:
 
 jobs:
@@ -11,7 +11,7 @@ jobs:
 
     strategy:
       matrix:
-        os:  [ubuntu-latest, windows-latest, macos-latest ]
+        os:  [ ubuntu-latest, windows-latest, macos-latest ]
         include:
           - os: ubuntu-latest
             output: out/annoyingmarkdown
@@ -28,6 +28,8 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v1
+        with:
+          ref: development
 
 #      - if: matrix.os == 'ubuntu-latest'
 #        name: Update linux packages
