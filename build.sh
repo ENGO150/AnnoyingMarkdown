@@ -15,7 +15,8 @@ compiler="gcc"
 os="$(uname)"
 os="$(echo $os | tr '[:upper:]' '[:lower:]')" # Lower case
 
-if [[ $os == "darwin" ]]; then os="macos"; fi
+if [[ $os == "darwin" ]]; then os="macos"; fi # MacOS fix
+if [[ $os == "cygwin" ]]; then os="windows"; fi # Windows fix
 
 output="out/annoyingmarkdown_$os"
 
