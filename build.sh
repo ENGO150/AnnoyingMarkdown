@@ -13,7 +13,7 @@ files="
 compiler="gcc"
 
 os="$(uname)"
-os="${os,,}" # Lower case
+os="$(echo $os | tr '[:upper:]' '[:lower:]')" # Lower case
 
 output="out/annoyingmarkdown_$os"
 
