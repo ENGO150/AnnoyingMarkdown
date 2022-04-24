@@ -10,14 +10,16 @@ If you want to use (latest) stable version:
 - Download AUR package 'annoyingmarkdown-git'
   https://aur.archlinux.org/packages/annoyingmarkdown-git
 
-- Download .zip file with compiled files here:
+- Download compiled files here:
   https://github.com/ENGO150/AnnoyingMarkdown/releases/latest
   
 --------------------
 
 If you want to use latest version:
-- Build this project by yourself by running 'build' script (and optionally install by 'install.sh')
+- Build this project by yourself by running 'build' script (or optionally install by 'build.sh install')
 
+- Download .zip file with compiled files here:
+  https://github.com/ENGO150/AnnoyingMarkdown/actions (Click on latest -> Artifacts)
 
 Enter text you want to use as args: ./AnnoyingMarkdown Some text
 

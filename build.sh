@@ -39,3 +39,11 @@ $compiler $files -o $output
 ###
 echo "Output generated as '$output'"
 ###
+
+if [[ $1 == "install" ]]; then
+    if [[ -f $output ]]; then
+        cp $output /usr/bin/annoyingmarkdown
+    else
+        echo "Compilation probably failed. ($output not found)"
+    fi
+fi
