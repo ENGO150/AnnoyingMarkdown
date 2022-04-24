@@ -5,8 +5,7 @@
 #define MISSING_ARG 1
 #define SUCCESS 0
 
-int
-main(int argc, char **argv)
+int main(int argc, char **argv)
 {
     //MISSING ARGS
     if (argc == 1)
