@@ -10,28 +10,22 @@ files="
       src/*.c
       "
 
-compiler="gcc"
+compiler="cc"
 
 os="$(uname)"
 os="$(echo $os | tr '[:upper:]' '[:lower:]')" # Lower case
 
 if [[ $os == "darwin" ]]; then os="macos"; fi # MacOS fix
-if [[ $os == "cygwin" ]]; then os="windows"; fi # Windows fix
 
 output="out/annoyingmarkdown_$os"
-
-# Check for Windows
-if [[ $os == "windows" ]]; then
-    output="$output.exe"
-fi
 
 ###
 echo "Getting default compiler..."
 ###
 
 # Get compiler
-if [[ "$os" == "linux" ]]; then
-    compiler="cc"
+if [[ "$os" == "macos" ]]; then
+    compiler="gcc"
 fi
 
 ###
