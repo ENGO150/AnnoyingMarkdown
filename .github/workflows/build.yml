@@ -19,7 +19,7 @@ jobs:
 
           - os: windows-latest
             output: out/annoyingmarkdown_windows.exe
-            build: build.sh
+            build: build.ps1
 
           - os: macos-latest
             output: out/annoyingmarkdown_macos
