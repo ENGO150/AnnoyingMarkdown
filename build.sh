@@ -30,7 +30,7 @@ fi
 
 ###
 echo "Using '$compiler' as default compiler."
-echo "Compilíng..."
+echo "Compiling..."
 ###
 
 # Compile
