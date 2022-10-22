@@ -5,14 +5,14 @@ This project takes args and separates each character by '||'...
 
 Some text => ||S||||o||||m||||e|||| ||||t||||e||||x||||t||
 
-  
+
 If you want to use (latest) stable version:
-- Download AUR package 'annoyingmarkdown-git'
+- Download AUR package 'annoyingmarkdown-git' [WARNING: Not working for some reason]
   https://aur.archlinux.org/packages/annoyingmarkdown-git
 
 - Download compiled files here:
   https://github.com/ENGO150/AnnoyingMarkdown/releases/latest
-  
+
 --------------------
 
 If you want to use latest version:
