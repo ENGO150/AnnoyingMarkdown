@@ -24,7 +24,7 @@ jobs:
           - os: macos-latest
             output: out/annoyingmarkdown_macos
             build: build.sh
-            
+
     steps:
       - name: Checkout repository
         uses: actions/checkout@v2
@@ -33,8 +33,8 @@ jobs:
 
 #      - if: matrix.os == 'ubuntu-latest'
 #        name: Update linux packages
-#        run: | 
-#          sudo apt update 
+#        run: |
+#          sudo apt update
 #          sudo apt upgrade
 
       - name: Permissions
