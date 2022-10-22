@@ -2,36 +2,47 @@
 #include <stdlib.h>
 #include <string.h>
 
-#define MISSING_ARG 1
+//#define MISSING_ARG 1
 #define SUCCESS 0
+#define MAX_GET 512
 
 int main(int argc, char **argv)
 {
+    char *completeArgs = malloc(MAX_GET + 1);
+
     //MISSING ARGS
-    if (argc == 1)
+    if (argc < 2)
     {
-        printf("Sorry, you must enter text as args... \"./AnnoyingMarkdown TEXT HERE\"\n");
-        return MISSING_ARG;
-    }
+        /*printf("Sorry, you must enter text as args... \"./AnnoyingMarkdown TEXT HERE\"\n");
+        return MISSING_ARG;*/
 
-    int completeArgsLength = 0;
+        printf("Please enter text:\n>>> ");
 
-    //COUNT completeArgsLength
-    for (int i = 1; i < argc; i++)
+        fgets(completeArgs, MAX_GET, stdin);
+        completeArgs[strlen(completeArgs) - 1] = '\0';
+
+        printf("\n");
+    } else
     {
-        if (i != 1) completeArgsLength++; //ONE FOR SPACE
+        int completeArgsLength = 0;
 
-        completeArgsLength += strlen(argv[i]);
-    }
+        //COUNT completeArgsLength
+        for (int i = 1; i < argc; i++)
+        {
+            if (i != 1) completeArgsLength++; //ONE FOR SPACE
 
-    char *completeArgs = malloc(completeArgsLength);
+            completeArgsLength += strlen(argv[i]);
+        }
 
-    //LOAD completeArgs
-    for (int i = 1; i < argc; i++)
-    {
-        if (i != 1) strcat(completeArgs, " "); //SPACE
+        completeArgs = realloc(completeArgs, completeArgsLength);
 
-        strcat(completeArgs, argv[i]);
+        //LOAD completeArgs
+        for (int i = 1; i < argc; i++)
+        {
+            if (i != 1) strcat(completeArgs, " "); //SPACE
+
+            strcat(completeArgs, argv[i]);
+        }
     }
 
     //VARIABLES
@@ -68,7 +79,7 @@ int main(int argc, char **argv)
     }
 
     printf("%s\n", output); //PRINT OUT OUTPUT
-    
+
     //DEALLOCATION
     free(completeArgs);
     free(output);
